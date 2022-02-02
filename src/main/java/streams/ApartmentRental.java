@@ -19,17 +19,13 @@ public class ApartmentRental {
                 .toList();
     }
 
-    public List<Apartment> findApartmentByExtras(String ... args) {
-        List<String> extraStringList = makeList(args);
-        List<Apartment> extraApartment = new ArrayList<>();
+//    public List<Apartment> findApartmentByExtras(String ... args) {
+//        List<String> extrass = makeList(args);
 //
-        for (Apartment apartment : apartments) {
-            if (apartment.getExtras().contains(extraStringList.toString())) {
-                extraApartment.add(apartment);
-            }
-        }
-        return extraApartment;
-    }
+//        return apartments.stream()
+//
+//
+//    }
 
     private List<String> makeList(String ... args) {
         List<String> extra = new ArrayList<>(args.length);

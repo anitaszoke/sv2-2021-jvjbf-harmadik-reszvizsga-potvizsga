@@ -81,6 +81,31 @@ public class ExamService {
         return Integer.parseInt(nameAndPoints[1]);
     }
 
-//    public List<String> findPeopleFailed() {
-//    }
+    public List<String> findPeopleFailed() {
+        List<String> name = new ArrayList<>();
+        for (Map.Entry<String, List<ExamResult>> entry : results.entrySet()) {
+            for (ExamResult e : entry.getValue()) {
+                if (e.getTheory() < theoryMax / 2 || e.getPractice() < practiceMax / 2) {
+                    name.add(entry.getKey());
+                }
+            }
+        }
+        return name;
+    }
+
+
+    public String findBestPerson() {
+        List<String> name = new ArrayList<>();
+        int thisAll = 0;
+        for (Map.Entry<String, List<ExamResult>> entry : results.entrySet()) {
+            for (ExamResult e : entry.getValue()) {
+                if (e.getTheory() + e.getPractice() > thisAll) {
+                    thisAll = e.getTheory()+e.getPractice();
+                }
+            }
+        }
+        return name.toString();
+    }
+
+    }
 }

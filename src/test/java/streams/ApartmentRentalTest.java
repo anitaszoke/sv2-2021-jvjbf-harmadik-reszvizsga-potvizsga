@@ -50,7 +50,7 @@ class ApartmentRentalTest {
 //
 //        assertEquals(2, result.size());
 //    }
-//
+
     @Test
     void testApartmentWithBathroomType(){
         assertTrue(apartmentRental.isThereApartmentWithBathroomType(BathRoomType.ONE_PER_ROOM));

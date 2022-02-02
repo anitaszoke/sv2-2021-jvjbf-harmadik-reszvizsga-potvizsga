@@ -34,15 +34,15 @@ class ExamServiceTest {
         assertEquals("Cannot read file: src\\main\\java\\data.txt", iae.getMessage());
     }
 
-//    @Test
-//    void testFindPeopleFailed() {
-//        assertEquals(List.of("Jack Doe", "Jack Smith", "Jill Doe"), examService.findPeopleFailed());
-//    }
-//
-//    @Test
-//    void findBestPersonTest() {
-//        assertEquals("Johnathan Hill", examService.findBestPerson());
-//    }
+    @Test
+    void testFindPeopleFailed() {
+        assertEquals(List.of("Jack Doe", "Jack Smith", "Jill Doe"), examService.findPeopleFailed());
+    }
+
+    @Test
+    void findBestPersonTest() {
+        assertEquals("Johnathan Hill", examService.findBestPerson());
+    }
 
 
 }
