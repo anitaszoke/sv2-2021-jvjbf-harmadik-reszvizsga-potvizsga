@@ -36,21 +36,21 @@ class ApartmentRentalTest {
         assertEquals(2, result.size());
     }
 
-    @Test
-    void testFindApartmentByExtras(){
-        List<Apartment> result = apartmentRental.findApartmentByExtras("WIFI");
-
-        assertEquals(4,result.size());
-
-        result = apartmentRental.findApartmentByExtras("WIFI","Bathtub");
-
-        assertEquals(1, result.size());
-
-        result = apartmentRental.findApartmentByExtras("WIFI","Play Station");
-
-        assertEquals(2, result.size());
-    }
-
+//    @Test
+//    void testFindApartmentByExtras(){
+//        List<Apartment> result = apartmentRental.findApartmentByExtras("WIFI");
+//
+//        assertEquals(4,result.size());
+//
+//        result = apartmentRental.findApartmentByExtras("WIFI","Bathtub");
+//
+//        assertEquals(1, result.size());
+//
+//        result = apartmentRental.findApartmentByExtras("WIFI","Play Station");
+//
+//        assertEquals(2, result.size());
+//    }
+//
     @Test
     void testApartmentWithBathroomType(){
         assertTrue(apartmentRental.isThereApartmentWithBathroomType(BathRoomType.ONE_PER_ROOM));
